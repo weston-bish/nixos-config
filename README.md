@@ -1,8 +1,15 @@
+# Screenshot:
+
+![Cool Linux Rice](./images/screenshot.png)
+
 # To Install:
 
 cd ./nixos-config
 
 sudo nixos-rebuild switch --flake .#nixos
+
+cp ./images/monokai.jpg ~/Pictures
+
 
 # To Do:
 
