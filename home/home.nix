@@ -55,10 +55,15 @@
   ];
 
   programs.zsh.enable = true;
-  programs.git.enable = true;
 
   wayland.windowManager.sway.enable = true;
   programs.waybar.enable = true;
+
+  programs.git = {
+    enable = true;
+    userName = "weston-bish";
+    userEmail = "digah2750@gmail.com";
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
