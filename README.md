@@ -1,6 +1,7 @@
 # To Install:
 
 cd into this directory
+
 sudo nixos-rebuild switch --flake .#nixos
 
 # To Do:
