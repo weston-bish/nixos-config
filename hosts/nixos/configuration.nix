@@ -113,6 +113,13 @@
      wget
   ];
 
+  environment.variables = {
+    XDG_SESSION_TYPE = "wayland";
+    XDG_CURRENT_DESKTOP = "sway";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
+
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
@@ -125,6 +132,20 @@
   };
 
   programs.gamemode.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    wlr.enable = true;
+    config = {
+      common = {
+        default = [ "wlr" ];
+      };
+      sway = {
+        default = [ "wlr" ];
+      };
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
