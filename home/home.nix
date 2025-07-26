@@ -57,6 +57,7 @@
     kdePackages.kdenlive
     sxiv
     lf
+    tmux
   ];
 
   programs.zsh = {
@@ -75,6 +76,10 @@
     history.ignoreAllDups = true;
     history.path = "$HOME/.zsh_history";
     history.ignorePatterns = ["rm *" "pkill *" "cp *"];
+  };
+
+  programs.starship = {
+    enable = true;
   };
 
   wayland.windowManager.sway = {

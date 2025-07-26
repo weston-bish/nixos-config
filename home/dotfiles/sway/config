@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term ghostty
 # Your preferred application launcher
-set $menu wofi --show drun --allow-images --hide-scroll --insensitive --no-actions --style ~/.config/wofi/style.css
+set $menu wofi --show drun --allow-images --hide-scroll --insensitive --no-actions --width 30% --style ~/.config/wofi/style.css
 
 ### Output configuration
 #
