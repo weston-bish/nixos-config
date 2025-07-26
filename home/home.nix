@@ -58,6 +58,7 @@
     sxiv
     lf
     tmux
+    yt-dlp
   ];
 
   programs.zsh = {
