@@ -104,6 +104,19 @@
     sway.enable = true;
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Layan-Dark";
+      package = pkgs.layan-gtk-theme;
+    };
+
+    iconTheme = {
+      name = "Flat-Remix-Cyan-Dark";
+      package = pkgs.flat-remix-icon-theme;
+    };
+  };
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file."${config.xdg.configHome}" = {

@@ -9,7 +9,7 @@
 - Test everything
 - auto update script
 - add VPNs
-- theming
+- QT Theme
 - tmux conf
 - tlp for laptops
 - firewall
