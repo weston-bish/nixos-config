@@ -53,6 +53,11 @@
     pavucontrol
     xorg.xeyes
     waybar
+    xdg-user-dirs
+    kdePackages.kdenlive
+    eddie
+    sxiv
+    lf
   ];
 
   programs.zsh.enable = true;

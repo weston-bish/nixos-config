@@ -4,7 +4,8 @@
 
 # To Do:
 
-- Fix home-manager configs like neovim and waybar
-- Migrate completely to flake
+- Fix neovim
+- Fix waybar (text rotation, audio control, align)
+- Migrate completely to flake?
 - Test everything
-- auto update script?
+- auto update script
