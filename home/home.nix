@@ -107,7 +107,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Layan-Dark";
+      name = "Layan-Dark-Solid";
       package = pkgs.layan-gtk-theme;
     };
 
