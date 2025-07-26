@@ -52,17 +52,30 @@
     brightnessctl
     pavucontrol
     xorg.xeyes
+    waybar
   ];
 
   programs.zsh.enable = true;
 
-  wayland.windowManager.sway.enable = true;
-  programs.waybar.enable = true;
+  wayland.windowManager.sway = {
+    enable = true;
+  };
 
   programs.git = {
     enable = true;
     userName = "weston-bish";
     userEmail = "digah2750@gmail.com";
+  };
+
+  home.pointerCursor = {
+    name = "Adwaita";
+    package = pkgs.adwaita-icon-theme;
+    size = 24;
+    x11 = {
+      enable = true;
+      defaultCursor = "Adwaita";
+    };
+    sway.enable = true;
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

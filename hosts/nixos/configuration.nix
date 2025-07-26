@@ -47,6 +47,8 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  hardware.graphics.enable = true;
+
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
@@ -123,6 +125,11 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    liberation_ttf
+    dejavu_fonts
   ];
 
   programs.steam = {
