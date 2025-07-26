@@ -9,3 +9,4 @@
 - Migrate completely to flake?
 - Test everything
 - auto update script
+- add VPNs

@@ -89,6 +89,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.westonb = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Weston Bishop";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -139,6 +140,8 @@
   };
 
   programs.gamemode.enable = true;
+
+  programs.zsh.enable = true;
 
   xdg.portal = {
     enable = true;
