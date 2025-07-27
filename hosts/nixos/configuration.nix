@@ -139,8 +139,6 @@
      dedicatedServer.openFirewall = true;
   };
 
-  programs.gamemode.enable = true;
-
   programs.zsh.enable = true;
 
   xdg.portal = {

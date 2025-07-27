@@ -59,6 +59,8 @@
     lf
     tmux
     yt-dlp
+    xfce.thunar
+    unzip
   ];
 
   programs.zsh = {
