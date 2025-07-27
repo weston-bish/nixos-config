@@ -226,5 +226,6 @@ bindsym $mod+r mode "resize"
 
     exec waybar
     exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+    exec xrandr --output DP-3 --primary
 
 include /etc/sway/config.d/*
