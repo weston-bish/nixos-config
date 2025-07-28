@@ -61,6 +61,9 @@
     yt-dlp
     xfce.thunar
     unzip
+    home-manager
+    obs-studio
+    audacity
   ];
 
   programs.zsh = {
