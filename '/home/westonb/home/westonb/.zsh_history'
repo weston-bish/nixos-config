@@ -1,0 +1,11 @@
+: 1753750110:0;ls home-manager
+: 1753750115:0;nvim home.nix
+: 1753750120:0;ls
+: 1753750127:0;nvim home-manager/home.nix
+: 1753750133:0;ls
+: 1753750137:0;nvim home-manager/common.nix
+: 1753750182:0;ls
+: 1753750218:0;git switch -c separate-hosts
+: 1753750220:0;ls
+: 1753750222:0;git status
+: 1753750233:0;git add *

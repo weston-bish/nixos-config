@@ -1,0 +1,103 @@
+[{
+
+"output": "DP-3",
+"include": "~/.config/waybar/config-global.jsonc",
+"position": "right",
+"margin-top": 20,
+"margin-right": 10,
+"margin-bottom": 20,
+
+"modules-left":	[
+	"sway/workspaces", 
+],
+
+"modules-center": [
+    "sway/window",
+],
+
+"modules-right": [
+	"tray",
+	"pulseaudio", 
+	"pulseaudio#source",
+	"network", 
+	"clock"
+],
+
+// PulseAudio {{{
+"pulseaudio": {
+	"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+	"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+},
+// }}}
+},
+
+
+{
+
+"output": "HDMI-A-1",
+"include": "~/.config/waybar/config-global.jsonc",
+"position": "left",
+"margin-top": 20,
+"margin-left": 10,
+"margin-bottom": 20,
+
+"modules-left":	[
+	"sway/workspaces", 
+],
+
+"modules-center": [
+    "sway/window",
+],
+
+"modules-right": [
+	"tray",
+	"pulseaudio", 
+	"pulseaudio#source",
+	"network", 
+	"clock"
+],
+
+// PulseAudio {{{
+"pulseaudio": {
+	"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+	"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+},
+// }}}
+
+},
+
+
+{
+
+"output": "eDP-1",
+"include": "~/.config/waybar/config-global.jsonc",
+"position": "left",
+"margin-top": 20,
+"margin-left": 10,
+"margin-bottom": 20,
+
+"modules-left":	[
+	"sway/workspaces", 
+],
+
+"modules-center": [
+    "sway/window",
+],
+
+"modules-right": [
+	"tray",
+	"pulseaudio", 
+	"pulseaudio#source",
+    "backlight",
+    "battery",
+	"network", 
+	"clock"
+],
+
+// PulseAudio {{{
+"pulseaudio": {
+	"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+	"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+},
+// }}}
+}]
