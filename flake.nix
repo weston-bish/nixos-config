@@ -18,7 +18,7 @@
     in {
       # empty default packages/output
       }
-    ) {
+    ) // {
     nixosConfigurations = {
       jupiter = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

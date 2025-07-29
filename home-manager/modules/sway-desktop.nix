@@ -14,6 +14,7 @@
     xorg.xeyes
     waybar
     gammastep
+    ghostty
   ];
 
   wayland.windowManager.sway = {
