@@ -6,11 +6,13 @@
 
 - Redo neovim config
 - Fix waybar (text rotation, audio control, align)
-- Test everything
 - add VPNs
 - QT Theme
 - tmux conf
+- other terminal utilities and aliases, like lf
+- Separate hosts - in progress
 - tlp for laptops
 - password manager
-- cloud
 - note taking system (neorg or obsidian)
+- fix swap drive
+- audio control
