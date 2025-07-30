@@ -14,6 +14,10 @@
   networking.hostName = "jupiter"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  swapDevices = [
+    { device = "/dev/nvme0n1p3"; }
+  ];
+
   services.displayManager.defaultSession = "sway";
 
   # Enable CUPS to print documents.
