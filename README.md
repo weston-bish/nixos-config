@@ -9,10 +9,7 @@
 - add VPNs
 - QT Theme
 - tmux conf
-- other terminal utilities and aliases, like lf
-- Separate hosts - in progress
-- tlp for laptops
+- other terminal utilities and aliases
 - password manager
 - note taking system (neorg or obsidian)
-- fix swap drive
-- audio control
+- waiting for drive issue

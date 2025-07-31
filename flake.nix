@@ -28,24 +28,38 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.westonb = import ./home-manager/modules/sway-desktop.nix;
+            home-manager.users.westonb = import ./home-manager/modules/common.nix;
 
           }
         ];
       };
-      # vulcan = nixpkgs.lib.nixosSystem {
-        # system = "x86_64-linux";
-        # modules = [
-          # ./hosts/vulcan/configuration.nix
-          # home-manager.nixosModules.home-manager
-          # {
-            # home-manager.useGlobalPkgs = true;
-            # home-manager.useUserPackages = true;
-            # home-manager.users.westonb = import ./hosts/vulcan/home.nix;
+      vulcan = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/vulcan/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.westonb = import ./home-manager/modules/common.nix;
 
-          # }
-        # ];
-      # };
+          }
+        ];
+      };
+
+    pluto = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/pluto/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.westonb = import ./home-manager/modules/common.nix;
+
+          }
+        ];
+      };
 
     };
   };
