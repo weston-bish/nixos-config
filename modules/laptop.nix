@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-  [
-    ../nixos/common.nix
-  ];
-
   services.tlp.enable = true;
 
   services.logind.lidSwitch = "suspend";
