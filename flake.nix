@@ -28,7 +28,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.westonb = import ./home-manager/modules/common.nix;
+            home-manager.users.westonb = import ./home-manager/common.nix;
 
           }
         ];
@@ -41,7 +41,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.westonb = import ./home-manager/modules/common.nix;
+            home-manager.users.westonb = import ./home-manager/common.nix;
 
           }
         ];
@@ -55,7 +55,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.westonb = import ./home-manager/modules/common.nix;
+            home-manager.users.westonb = import ./home-manager/common.nix;
 
           }
         ];
