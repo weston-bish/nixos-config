@@ -2,5 +2,5 @@
 
 {
   zramSwap.enable = true;
-  zramSwap.memoryPerfect = 50;
+  zramSwap.memoryPercent = 50;
 }
