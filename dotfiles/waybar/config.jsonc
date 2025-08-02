@@ -2,9 +2,9 @@
 
 "output": "DP-3",
 "include": "~/.config/waybar/config-global.jsonc",
-"position": "right",
+"position": "left",
 "margin-top": 20,
-"margin-right": 10,
+"margin-left": 10,
 "margin-bottom": 20,
 
 "modules-left":	[
