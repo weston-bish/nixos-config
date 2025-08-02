@@ -4,8 +4,7 @@
 
 # To Do:
 
-- Redo neovim config
-- Fix waybar (text rotation, audio control, align)
+- Fix waybar (align)
 - add VPNs
 - QT Theme
 - tmux conf
