@@ -1,6 +1,12 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./modules/tmux-config.nix
+  ];
+
   home.stateVersion = "25.05";
 
   home.username = "westonb";
@@ -69,7 +75,6 @@
     wget
     curl
     git
-    tmux
     brave
     btop
     libreoffice
