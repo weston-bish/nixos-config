@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./modules/tmux-config.nix
+    ./home-manager/modules/neovim-config.nix
   ];
 
   home.stateVersion = "25.05";
@@ -68,37 +69,37 @@
   };
 
   home.packages = with pkgs; [
-    neovim
-    fastfetch
-    htop
-    unzip
-    wget
-    curl
-    git
-    brave
-    btop
-    libreoffice
-    gimp
-    qbittorrent
-    mpv
-    pavucontrol
-    xdg-user-dirs
-    kdePackages.kdenlive
-    sxiv
-    lf
-    xfce.thunar
-    obs-studio
     audacity
-    waybar
-    wofi
-    sway
-    grim
-    wl-clipboard
-    xorg.xeyes
+    bat
+    brave
+    brightnessctl
+    btop
+    curl
+    fastfetch
     gammastep
     ghostty
-    brightnessctl
-    bat
+    gimp
+    git
+    grim
+    htop
+    kdePackages.kdenlive
+    lf
+    libreoffice
+    mpv
+    neovim
+    obs-studio
+    pavucontrol
+    qbittorrent
+    sway
+    sxiv
+    unzip
+    waybar
+    wget
+    wl-clipboard
+    wofi
+    xdg-user-dirs
+    xfce.thunar
+    xorg.xeyes
   ];
 
   programs.home-manager.enable = true;

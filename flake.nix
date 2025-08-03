@@ -46,7 +46,6 @@
                 imports = [
                   ./home-manager/common.nix
                   nvf.homeManagerModules.default
-                  ./home-manager/modules/neovim-config.nix
                 ];
               };
             }
