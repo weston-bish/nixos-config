@@ -19,6 +19,8 @@
           nvim-cmp.enable = true;
         };
 
+        options.shiftwidth = 2;
+
         snippets.luasnip.enable = true;
 
         statusline = {

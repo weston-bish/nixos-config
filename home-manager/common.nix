@@ -98,6 +98,7 @@
     gammastep
     ghostty
     brightnessctl
+    bat
   ];
 
   programs.home-manager.enable = true;
