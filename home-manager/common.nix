@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./modules/tmux-config.nix
-    ./home-manager/modules/neovim-config.nix
+    ./modules/neovim-config.nix
   ];
 
   home.stateVersion = "25.05";
@@ -89,6 +89,7 @@
     neovim
     obs-studio
     pavucontrol
+    prismlauncher
     qbittorrent
     sway
     sxiv
