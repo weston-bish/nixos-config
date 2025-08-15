@@ -20,3 +20,4 @@ desktop operating system designed for programming, office use, and gaming.
 - password manager
 - note taking system (neorg or obsidian)
 - waiting for drive issue
+- startpage
