@@ -15,9 +15,9 @@ desktop operating system designed for programming, office use, and gaming.
 
 - Fix waybar (align)
 - add VPNs
-- QT Theme
+- QT Theme (maybe custom themes)
 - other terminal utilities and aliases
 - password manager
-- note taking system (neorg or obsidian)
 - waiting for drive issue
 - startpage
+- Nix Darwin
