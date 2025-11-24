@@ -15,7 +15,7 @@ vim.pack.add{
   { src = 'https://github.com/nvim-telescope/telescope.nvim' },
   { src = 'https://github.com/lewis6991/gitsigns.nvim' },
   { src = 'https://github.com/chomosuke/typst-preview.nvim' },
-  { src = 'https://github.com/nvim-telescope/telescope-fzf-native.nvim' },
+  -- { src = 'https://github.com/nvim-telescope/telescope-fzf-native.nvim' },
   { src = 'https://github.com/folke/which-key.nvim' },
   { src = 'https://github.com/windwp/nvim-autopairs' },
   { src = 'https://github.com/numToStr/Comment.nvim' },
@@ -109,7 +109,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- Enable Telescope FZF Native
-require('telescope').load_extension('fzf')
+-- require('telescope').load_extension('fzf')
 
 -- Lualine
 require('lualine').setup {

@@ -20,6 +20,37 @@
 
     shellAliases = {
       # put aliases here
+      ls = "eza --icons=always";
+      ll = "eza -la --icons=always";
+      up = "cd ..";
+
+      gs = "git status";
+      ga = "git add";
+      gc = "git commit";
+      gp = "git push";
+      gl = "git log --oneline --graph --decorate";
+      gco = "git checkout";
+      gb = "git branch";
+      gd = "git diff";
+      gpull = "git pull --rebase";
+      gcl = "git clone";
+      gr = "git restore";
+      grh = "git reset HEAD";
+
+      vim = "nvim";
+      vi = "nvim";
+
+      update = "sudo nixos-rebuild switch";
+
+      myip = "curl ifconfig.me";
+
+      rm = "rm -i";
+      cp = "cp -i";
+      mv = "mv -i";
+
+      tree = "tree -C";
+      
+      please = "sudo";
     };
 
     history.size = 10000;
@@ -74,24 +105,35 @@
     brightnessctl
     btop
     curl
+    delta
+    discord
+    eza
     fastfetch
+    fd
+    fzf
     gammastep
+    gcc
     ghostty
     gimp
     git
+    gnumake
     grim
     htop
+    jq
     kdePackages.kdenlive
-    lf
+    lazygit
     libreoffice
     mpv
     neovim
     obs-studio
     pavucontrol
+    pkg-config
     prismlauncher
     qbittorrent
+    ripgrep
     sway
     sxiv
+    tree
     unzip
     waybar
     wget
@@ -100,6 +142,7 @@
     xdg-user-dirs
     xfce.thunar
     xorg.xeyes
+    yazi
   ];
 
   programs.home-manager.enable = true;

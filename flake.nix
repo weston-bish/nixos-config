@@ -10,6 +10,9 @@
     };
 
     flake-utils.url = "github:numtide/flake-utils";
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
   };
 
   outputs = inputs @ {
@@ -17,14 +20,21 @@
     nixpkgs,
     home-manager,
     flake-utils,
+    neovim-nightly-overlay,
     ...
   }:
+  let
+    overlays = [
+      neovim-nightly-overlay.overlays.default
+    ];
+  in
     flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
         };
+
       in {
         # empty default packages/output
       }
@@ -50,6 +60,9 @@
         vulcan = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+	    {
+	      nixpkgs.overlays = overlays;
+	    }
             ./hosts/vulcan/configuration.nix
             home-manager.nixosModules.home-manager
             {
