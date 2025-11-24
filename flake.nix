@@ -10,8 +10,6 @@
     };
 
     flake-utils.url = "github:numtide/flake-utils";
-
-    nvf.url = "github:notashelf/nvf";
   };
 
   outputs = inputs @ {
@@ -19,7 +17,6 @@
     nixpkgs,
     home-manager,
     flake-utils,
-    nvf,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (
@@ -45,7 +42,6 @@
               home-manager.users.westonb = {
                 imports = [
                   ./home-manager/common.nix
-                  nvf.homeManagerModules.default
                 ];
               };
             }

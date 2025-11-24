@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./modules/tmux-config.nix
-    ./modules/neovim-config.nix
   ];
 
   home.stateVersion = "25.05";
