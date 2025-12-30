@@ -34,6 +34,10 @@
     };
     
     darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
+      specialArgs = {
+        inherit self;
+      };
+
       modules = [ 
         {
 	  nixpkgs.overlays = overlays;
