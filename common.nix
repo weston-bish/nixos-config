@@ -57,6 +57,7 @@
 			typst
 			unzip
 			wget
+			wireguard-tools
 			yazi
 			yt-dlp
 	];
