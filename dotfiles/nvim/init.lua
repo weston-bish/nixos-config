@@ -7,7 +7,10 @@ vim.pack.add{
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/sainnhe/sonokai' },
   -- { src = 'https://github.com/rose-pine/neovim' },
-  { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter', (oldAttrs: oldAttrs // {
+    version = "bundled";
+    });
+  },
   -- ADD LATER { src = 'https://github.com/hrsh7th/nvim-cmp' },
   { src = 'https://github.com/nvim-lualine/lualine.nvim' },
   { src = 'https://github.com/nvim-tree/nvim-web-devicons' }, -- lualine dependency
