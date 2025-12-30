@@ -39,10 +39,12 @@
 			ghostty
 			gimp
 			grim
+			inkscape
 			kdePackages.kdenlive
 			keepassxc
 			libreoffice
 			mullvad-browser
+			nicotine-plus
 			obs-studio
 			pavucontrol
 			qbittorrent
