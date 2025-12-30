@@ -328,7 +328,7 @@
 
 "sway/window": {
     "rotate": 90,
-    "max-length": 20,
+    "max-length": 50,
 },
 
 "hyprland/window": {
