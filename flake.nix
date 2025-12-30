@@ -1,90 +1,52 @@
 {
-  description = "westonb's NixOS config";
+  description = "Example nix-darwin system flake";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    flake-utils.url = "github:numtide/flake-utils";
-
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
   };
 
-  outputs = inputs @ {
-    self,
-    nixpkgs,
-    home-manager,
-    flake-utils,
-    neovim-nightly-overlay,
-    ...
-  }:
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, neovim-nightly-overlay }:
   let
     overlays = [
       neovim-nightly-overlay.overlays.default
     ];
   in
-    flake-utils.lib.eachDefaultSystem (
-      system: let
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-
-      in {
-        # empty default packages/output
-      }
-    )
-    // {
-      nixosConfigurations = {
-        jupiter = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/jupiter/configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.westonb = {
-                imports = [
-                  ./home-manager/common.nix
-                ];
-              };
-            }
-          ];
-        };
-        vulcan = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-	    {
-	      nixpkgs.overlays = overlays;
-	    }
-            ./hosts/vulcan/configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.westonb = import ./home-manager/common.nix;
-            }
-          ];
-        };
-
-        pluto = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/pluto/configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.westonb = import ./home-manager/common.nix;
-            }
-          ];
-        };
-      };
+  {
+    nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
+      modules = [ 
+        {
+          nixpkgs.overlays = overlays;
+        }
+        ./nixos/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.weston = ./nixos/home.nix;
+        }
+      ];
     };
+    
+    darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
+      modules = [ 
+        {
+	  nixpkgs.overlays = overlays;
+	}
+        ./mac/configuration.nix
+	home-manager.darwinModules.home-manager
+	{
+	  home-manager.useGlobalPkgs = true;
+	  home-manager.useUserPackages = true;
+	  home-manager.users.weston = ./mac/home.nix;
+	}
+      ];
+    };
+    
+  };
 }
