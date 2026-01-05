@@ -35,6 +35,8 @@
 	# only gui and linux-only apps go here, cli go in common
 	home.packages = with pkgs; [
 		audacity
+		calibre
+		easyeffects
 			gammastep # linux only
 			ghostty
 			gimp
@@ -42,6 +44,7 @@
 			inkscape
 			kdePackages.kdenlive
 			keepassxc
+			krita
 			libreoffice
 			mullvad-browser
 			nicotine-plus
